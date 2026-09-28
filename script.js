@@ -35,3 +35,33 @@ if (navToggle && siteNav) {
     });
   });
 }
+
+// Pre-select the relevant inquiry category when a service/partnership CTA links to the contact form.
+const inquiryForm = document.getElementById("inquiry-form");
+
+document.querySelectorAll("[data-service]").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!inquiryForm) return;
+    const match = inquiryForm.querySelector(`input[name="service"][value="${CSS.escape(link.dataset.service)}"]`);
+    if (match) match.checked = true;
+  });
+});
+
+// Static site, no backend: build a mailto link from the inquiry form instead of submitting anywhere.
+if (inquiryForm) {
+  inquiryForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(inquiryForm);
+    const service = data.get("service") || "General Inquiry";
+    const subject = `New inquiry: ${service}`;
+    const body = [
+      `Service: ${service}`,
+      `Name: ${data.get("name") || ""}`,
+      `Company: ${data.get("company") || ""}`,
+      `Email: ${data.get("email") || ""}`,
+      "",
+      data.get("message") || "",
+    ].join("\n");
+    window.location.href = `mailto:contact@aathee.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
