@@ -42,6 +42,8 @@ button, input, textarea { font: inherit; }
 .site-nav a, .footer-top { transition: opacity .2s ease; }
 .site-nav a:hover, .footer-top:hover { opacity: .7; }
 .nav-contact span { padding-left: .3rem; color: var(--color-sun-light); }
+.nav-toggle { display: none; width: 34px; height: 34px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; align-items: center; justify-content: center; }
+.nav-toggle svg { width: 22px; height: 22px; }
 
 .hero {
   position: relative;
@@ -196,8 +198,6 @@ button, input, textarea { font: inherit; }
 @media (max-width: 560px) {
   :root { --page-gutter: 1.25rem; }
   .site-header { height: 68px; }
-  .site-nav { gap: 1.1rem; font-size: .75rem; }
-  .site-nav a:first-child { display: none; }
   .hero { min-height: 680px; min-height: max(600px, 92svh); align-items: flex-end; padding-bottom: 8rem; }
   .hero__image { object-position: 62% center; }
   .hero::after { background: linear-gradient(90deg, rgb(5 10 25 / 76%), rgb(7 15 33 / 12%)), linear-gradient(0deg, rgb(8 15 33 / 82%), transparent 72%); }
@@ -219,6 +219,31 @@ button, input, textarea { font: inherit; }
   .contact__intro .section-number { right: .1rem; }
   .site-footer { min-height: 100px; flex-wrap: wrap; }
   .site-footer p { order: 3; width: 100%; }
+}
+@media (max-width: 700px) {
+  .nav-toggle { display: inline-flex; }
+  .site-header--static { position: relative; }
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: .25rem var(--page-gutter) 1.25rem;
+    background: var(--color-deep);
+    border-bottom: 1px solid var(--color-line);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+  }
+  .site-nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .site-nav a { padding: .9rem 0; border-bottom: 1px solid var(--color-line); font-size: .95rem; }
+  .nav-contact { border-bottom: 0; }
+  .nav-contact span { padding-left: .5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

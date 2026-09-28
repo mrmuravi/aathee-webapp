@@ -16,7 +16,10 @@
 <body>
   <header class="site-header site-header--static">
     <a class="wordmark" href="index.html" aria-label="Aathee home"><img src="assets/brand/aathee-wordmark-color.svg" alt=""></a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#partnerships">Partnerships</a>
