@@ -1,0 +1,12 @@
+{
+  "name": "aathee",
+  "short_name": "aathee",
+  "icons": [
+    { "src": "icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ],
+  "theme_color": "#0E1A36",
+  "background_color": "#0E1A36",
+  "display": "standalone"
+}
