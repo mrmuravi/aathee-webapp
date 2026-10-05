@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E1A36">
+  <meta name="description" content="A practical, stage-by-stage look at where Microsoft Copilot genuinely helps a corporate Talent Acquisition team — from requisition to onboarding handoff — and where a human still needs to own the call.">
+  <title>Microsoft Copilot for Talent Acquisition: an end-to-end walkthrough — Aathee Blog</title>
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="assets/brand/manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header site-header--static">
+    <a class="wordmark" href="index.html" aria-label="Aathee home"><img src="assets/brand/aathee-wordmark-color.svg" alt=""></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#partnerships">Partnerships</a>
+      <a href="blog.html" aria-current="page">Insights</a>
+      <a class="nav-contact" href="index.html#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article class="post section-wrap">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> AI Automation</p>
+      <h1>Microsoft Copilot for Talent Acquisition: an end-to-end walkthrough</h1>
+      <p class="post__meta"><time datetime="2026-10-05">October 5, 2026</time> · 8 min read</p>
+      <div class="post__body">
+        <p>Most "Copilot for recruiting" conversations start and end with job description drafting. That's a real use case, but it's the smallest part of a Talent Acquisition team's week. The more useful question is what changes across the <em>whole</em> hiring lifecycle — requisition to onboarding handoff — when Microsoft 365 Copilot and a purpose-built Copilot Studio agent are wired into how a corporate TA team actually works.</p>
+        <p>Here's that walkthrough, stage by stage, including where we'd stop short of automating and leave the call to a person.</p>
+
+        <h2>1. Requisition intake and job description drafting</h2>
+        <p>A hiring manager's intake notes are usually a half-formed email or a five-minute call. Copilot in Word or Teams can turn that raw input — plus a pull from a past, similar requisition in SharePoint — into a first-draft job description and a structured intake summary (level, must-haves vs. nice-to-haves, comp band, approval chain) for the recruiter to edit rather than start from a blank page.</p>
+        <p><strong>Where a person stays in charge:</strong> leveling, comp banding, and any language that could skew exclusionary still get a human edit and a second pair of eyes before the req goes live.</p>
+
+        <h2>2. Sourcing and longlist research</h2>
+        <p>Copilot's web- and enterprise-grounded search can summarize a candidate's public profile, prior roles, and overlap with the role's requirements, and draft a personalized first-touch message referencing specifics rather than a generic template. For a recruiter working ten open reqs, that's the difference between five outreach messages a day and twenty.</p>
+        <p><strong>Where a person stays in charge:</strong> the recruiter still picks who gets contacted and reviews every outbound message before it sends. Copilot drafts; it doesn't dispatch.</p>
+
+        <h2>3. Resume screening and shortlisting</h2>
+        <p>This is the stage worth building a dedicated Copilot Studio agent for, rather than relying on ad hoc prompts. An agent connected to the ATS can triage incoming applications against the structured requisition criteria from step one, flag clear mismatches, and surface a ranked shortlist with the reasoning attached — "meets the SQL requirement, 2 years short on the leadership criterion" rather than an opaque score.</p>
+        <p><strong>Where a person stays in charge:</strong> this is the highest-governance stage in the whole workflow. The agent shortlists; it does not reject. Every "no" that reaches a candidate is a recruiter's decision, and the matching logic should be auditable — able to explain itself to a candidate, a hiring manager, or a regulator if asked. Disability, EEO, and local hiring-law obligations don't move just because a model is involved.</p>
+
+        <h2>4. Interview scheduling and coordination</h2>
+        <p>This is where the time savings are the least controversial and the most immediate. Copilot in Outlook and Teams can coordinate panel availability across a hiring manager, two interviewers, and a candidate in a different time zone, draft the confirmation email, and attach prep materials automatically. What used to be eight back-and-forth emails becomes one scheduling thread a recruiter approves.</p>
+
+        <h2>5. Interview preparation and structured scorecards</h2>
+        <p>Before each interview, Copilot can assemble a one-page brief per panelist: the candidate's background, the specific competencies that panelist owns, and suggested questions tied to the requisition's must-haves — so a hiring manager walks in prepared instead of skimming a resume in the elevator. After the interview, Copilot in Teams can draft a structured scorecard from the panelist's notes or the (consented, disclosed) call transcript, organized against the same competencies.</p>
+        <p><strong>Where a person stays in charge:</strong> the scorecard is a draft of the interviewer's own observations, not an independent assessment. The interviewer reviews and signs off before it enters the candidate's record.</p>
+
+        <h2>6. Debrief synthesis and the hire/no-hire decision</h2>
+        <p>With scorecards from three or four panelists in hand, Copilot can summarize where panelists agree, where they diverge, and which competencies are still untested — useful input to a debrief meeting, not a replacement for it. The synthesis surfaces disagreement for the panel to resolve; it doesn't resolve it for them.</p>
+
+        <h2>7. Offer generation and communication</h2>
+        <p>Once a decision is made, Copilot can generate the offer letter from the approved template and comp data, draft the verbal-offer talking points for the recruiter, and prepare the candidate-facing FAQ (benefits, start date, relocation) pulled from current HR documentation rather than whatever the recruiter remembers from the last offer they wrote.</p>
+
+        <h2>8. Onboarding handoff</h2>
+        <p>The last mile is often the most manual: looping in IT for equipment, facilities for a badge, the hiring manager for a 30-60-90 plan, and HR for paperwork. A Copilot Studio agent can trigger this handoff the moment an offer is signed — generating the IT ticket, the onboarding checklist, and the new hire's first-week calendar invite — so the candidate's first day isn't the first time anyone outside TA hears they're starting.</p>
+
+        <h2>What this takes to stand up</h2>
+        <p>None of this works well as a collection of one-off prompts. The stages that benefit most from a dedicated Copilot Studio agent — screening and onboarding handoff — need an actual connection to the ATS and HRIS, a defined approval and audit trail, and a clear line on what the agent is allowed to decide versus merely draft. That's an integration and governance project as much as an AI one, which is usually where we get involved: wiring the agent to the systems TA already uses, not replacing them.</p>
+      </div>
+      <a class="text-link" href="blog.html">← Back to all posts</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark wordmark--footer" href="index.html" aria-label="Aathee, back to top"><img src="assets/brand/aathee-wordmark-color.svg" alt=""></a>
+    <p>© 2026 Aathee. All rights reserved.</p>
+    <a class="footer-top" href="index.html#home">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
